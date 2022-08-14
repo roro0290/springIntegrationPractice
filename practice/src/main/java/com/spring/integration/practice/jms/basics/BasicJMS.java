@@ -1,4 +1,4 @@
-package com.spring.integration.practice.jms;
+package com.spring.integration.practice.jms.basics;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.ActiveMQXAConnectionFactory;
@@ -48,7 +48,7 @@ public class BasicJMS {
         return cf.createQueueConnection();
     }
 
-    public Session createSession(Connection connection) throws JMSException {
+    public Session createSessionFromConn(Connection connection) throws JMSException {
         return connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
     }
 
@@ -121,7 +121,7 @@ public class BasicJMS {
         BasicJMS app = new BasicJMS();
         ConnectionFactory cf = app.createConnectionFactory();
         Connection connection = app.createConnection(cf);
-        Session session = app.createSession(connection);
+        Session session = app.createSessionFromConn(connection);
         MessageConsumer consumer = app.createConsumerFromQueue(
                 session,
                 "TEST_QUEUE",
