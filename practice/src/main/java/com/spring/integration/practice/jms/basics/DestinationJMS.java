@@ -22,7 +22,12 @@ public class DestinationJMS {
     public void sendMsgToDestination(String message, Session session, Destination dst) throws JMSException {
         TextMessage msg = session.createTextMessage(message);
         MessageProducer messageProducer = session.createProducer(dst);
-        messageProducer.send(msg);
+        messageProducer.setPriority(9); // 0 - 4 are normal, 5 - 9 are expedited
+        messageProducer.setTimeToLive(10000); // default = 0 ⇒ will never expire
+        messageProducer.send(msg,
+                DeliveryMode.NON_PERSISTENT,
+                9, // priority
+                10000); // time to live
     }
 
     // Pass a message listener for asynchronous queue
