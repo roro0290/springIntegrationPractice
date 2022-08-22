@@ -4,9 +4,9 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 
-public abstract class AbstractSenderApplication {
+public abstract class AbstractApplication {
 
-    public AbstractSenderApplication() {
+    public AbstractApplication() {
         try {
             connect(); // set up connection
             sendMessages(); // send the messages
