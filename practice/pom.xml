@@ -73,10 +73,10 @@
 			<artifactId>activemq-client</artifactId>
 			<version>5.17.1</version>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-activemq</artifactId>
-		</dependency>-->
+		</dependency>
 	</dependencies>
 
 	<build>

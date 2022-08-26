@@ -1,4 +1,4 @@
-package com.example.springIntegration.helloWorld.sampleThree;
+package com.spring.integration.practice.helloWorld.sampleThree;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

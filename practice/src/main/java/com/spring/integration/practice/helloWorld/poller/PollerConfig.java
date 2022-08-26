@@ -1,4 +1,4 @@
-package com.example.springIntegration.helloWorld.poller;
+package com.spring.integration.practice.helloWorld.poller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.example.springIntegration.helloWorld.sampleOne;
+package com.spring.integration.practice.helloWorld.sampleOne;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

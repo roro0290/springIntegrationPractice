@@ -1,4 +1,4 @@
-package com.example.springIntegration.helloWorld.sampleThree;
+package com.spring.integration.practice.helloWorld.sampleThree;
 
 import org.springframework.integration.annotation.Gateway;
 import org.springframework.integration.annotation.MessagingGateway;

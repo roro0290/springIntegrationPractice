@@ -1,9 +1,5 @@
-package com.example.springIntegration.helloWorld.poller;
+package com.spring.integration.practice.helloWorld.poller;
 
-import com.example.springIntegration.helloWorld.sampleThree.HelloGateway;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
