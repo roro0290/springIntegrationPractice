@@ -82,8 +82,8 @@ public class SpringBootExample {
         return jmsTemplate;
     }
 
-    @Bean
-    @ConfigurationProperties(prefix = "spring.activemq")
+    @Bean // comment temp due to "Duplicate @ConfigurationProperties definition for prefix 'spring.activemq'" error
+    //@ConfigurationProperties(prefix = "spring.activemq")
     public ActiveMQProperties activeMQProperties() {
         return new ActiveMQProperties();
     }
