@@ -31,9 +31,16 @@ public class ActiveMQConfiguration {
         return new ActiveMQProperties();
     }
 
-    @Bean
+    @Bean // create ActiveMQ request queue
     public Queue requestQueue(){
-        return new ActiveMQQueue("REQUEST_QUEUE");
+        return new ActiveMQQueue();
     }
+
+    @Bean // create ActiveMQ reply queue
+    public Queue replyQueue(){
+        return new ActiveMQQueue();
+    }
+
+
 
 }

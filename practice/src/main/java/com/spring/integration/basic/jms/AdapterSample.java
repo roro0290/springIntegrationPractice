@@ -17,17 +17,17 @@ import javax.jms.ConnectionFactory;
 public class AdapterSample {
 
     @Bean
-    public CharacterStreamReadingMessageSource userInputSource(){
+    public static CharacterStreamReadingMessageSource userInputSource(){
         // Create a source that reads from System.in
         return CharacterStreamReadingMessageSource.stdin();
     }
 
     @Bean
-    public CharacterStreamWritingMessageHandler outputToUserDst(){
+    public static CharacterStreamWritingMessageHandler outputToUserDst(){
         return CharacterStreamWritingMessageHandler.stdout();
     }
 
-    @Bean
+    //@Bean
     public IntegrationFlow sendMessageFlow(@Qualifier("activeMQConnectionFactory") ConnectionFactory cf){
         return IntegrationFlows
                 .from(userInputSource())
@@ -35,7 +35,7 @@ public class AdapterSample {
                 .get();
     }
 
-    @Bean
+    //@Bean
     public IntegrationFlow receiveMessageFlow(@Qualifier("activeMQConnectionFactory")ConnectionFactory cf){
         return IntegrationFlows
                 .from(Jms.messageDrivenChannelAdapter(cf).destination("requestQueue"))
